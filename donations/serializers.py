@@ -1,10 +1,8 @@
 from rest_framework import serializers
-
 from .models import Donation
 
 
 class DonationSerializer(serializers.ModelSerializer):
-
     donor_name = serializers.CharField(
         source="donor.username",
         read_only=True
@@ -16,13 +14,14 @@ class DonationSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
-
         model = Donation
         fields = [
             "id",
             "donor",
+            "donor_name",
             "campaign",
+            "campaign_title",
             "amount",
             "message",
-            "created_at",
+            "donated_at",   # ✅ Use donated_at instead of created_at
         ]

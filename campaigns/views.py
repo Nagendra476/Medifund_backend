@@ -60,10 +60,13 @@ class CampaignDetailView(APIView):
 
         try:
 
-            campaign = Campaign.objects.get(
-                id=pk,
-                created_by=request.user
-            )
+            if request.user.role == 'admin':
+                campaign = Campaign.objects.get(id=pk)
+            else:
+                campaign = Campaign.objects.get(
+                    id=pk,
+                    created_by=request.user
+                )
 
         except Campaign.DoesNotExist:
 
@@ -101,10 +104,13 @@ class CampaignDetailView(APIView):
 
         try:
 
-            campaign = Campaign.objects.get(
-                id=pk,
-                created_by=request.user
-            )
+            if request.user.role == 'admin':
+                campaign = Campaign.objects.get(id=pk)
+            else:
+                campaign = Campaign.objects.get(
+                    id=pk,
+                    created_by=request.user
+                )
 
         except Campaign.DoesNotExist:
 
@@ -126,10 +132,13 @@ class CampaignDetailView(APIView):
 
         try:
 
-            campaign = Campaign.objects.get(
-                id=pk,
-                created_by=request.user
-            )
+            if request.user.role == 'admin':
+                campaign = Campaign.objects.get(id=pk)
+            else:
+                campaign = Campaign.objects.get(
+                    id=pk,
+                    created_by=request.user
+                )
 
         except Campaign.DoesNotExist:
 
