@@ -1,0 +1,36 @@
+# Core Django
+Django==5.2.17
+djangorestframework==3.18.1
+djangorestframework-simplejwt==5.5.1
+PyJWT==2.14.0
+
+# CORS
+django-cors-headers==4.7.0
+
+# PostgreSQL (Supabase)
+psycopg2-binary==2.9.10
+dj-database-url==2.3.0
+
+# Environment variables
+python-dotenv==1.1.0
+
+# Production WSGI server
+gunicorn==23.0.0
+
+# Static file serving
+whitenoise==6.9.0
+
+# Async support (required by Django 5)
+asgiref==3.12.1
+
+# Payment gateway
+razorpay==1.4.2
+
+# Media/file uploads (Cloudinary — only required if using Cloudinary storage)
+cloudinary==1.42.2
+django-cloudinary-storage==0.3.0
+
+# Utilities
+sqlparse==0.6.0
+tzdata==2026.4
+Pillow==11.2.1
